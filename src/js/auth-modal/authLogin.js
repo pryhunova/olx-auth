@@ -37,7 +37,7 @@ export default async function loginSubmit(log) {
     console.log('error', error);
   }
 }
-console.log(loginSubmit());
+// console.log(loginSubmit());
 
 // // import { loginUser } from './authApi';
 //  import { pushError } from './pnotify';
