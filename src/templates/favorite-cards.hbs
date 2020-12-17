@@ -1,0 +1,29 @@
+<ul class="product-card-group">
+    {{#each this}}
+    <li class="product-card" data-id={{_id}}>
+        <div class="product-image">
+            <img class="product-img" src="./images/rectangle-7.jpg" alt="" />
+            <div>
+                <button class="product-card-icon product-card-icon-favorite-user">
+                    <svg class="icon" width="16" height="16">
+                        <use href="./images/sprite.svg#icon-love-icon"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="product-content">
+            <!--Наименование карточки-->
+            <h3 class="product-name">{{title}}</h3>
+            <!--Цена-->
+            {{#if isOnSale}}
+            <p class="product-price-initial decorative-line">{{oldPrice}}Цена</p>
+            <p class="product-price-sale">{{price}}Цена грн</p>
+            {{/if}}
+
+            {{#unless isOnSale}}
+            <p class="product-price">{{price}} грн</p>
+            {{/unless}}
+        </div>
+    </li>
+    {{/each}}
+</ul>
